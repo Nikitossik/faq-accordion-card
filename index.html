@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <main class="wrapper">
+    <div class="faq">
+      <img class="faq-box" src="./images/illustration-box-desktop.svg">
+      <div class="faq-image">
+        <picture class="faq-image__woman">
+          <source srcset="./images/illustration-woman-online-desktop.svg" media="(min-width: 57.5em)" />
+          <img src="./images/illustration-woman-online-mobile.svg" alt="woman working">
+        </picture>
+        <picture class="faq-image__pattern">
+          <source srcset="./images/bg-pattern-desktop.svg" media="(min-width: 57.5em)" />
+          <img src="./images/bg-pattern-mobile.svg" alt="background pattern">
+        </picture>
+      </div>
+      <div class="faq-body">
+        <h2 class="title faq__title">faq</h2>
+        <div class="faq-accordion">
+          <div class="faq-accordion__item">
+            <header class="faq-accordion__header">
+              <h3 class="faq-accordion__title">How many team members can I invite?</h3>
+              <img class="faq-accordion__icon" src="./images/icon-arrow-down.svg" alt="arrow down">
+            </header>
+            <div class="faq-accordion__text">You can invite up to 2 additional users on the Free plan. There is no
+              limit on
+              team members for the Premium plan.</div>
+          </div>
+          <div class="faq-accordion__item">
+            <header class="faq-accordion__header">
+              <h3 class="faq-accordion__title">What is the maximum file upload size?</h3>
+              <img class="faq-accordion__icon" src="./images/icon-arrow-down.svg" alt="arrow down">
+            </header>
+            <div class="faq-accordion__text">No more than 2GB. All files in your account must fit your allotted
+              storage space.</div>
+          </div>
+          <div class="faq-accordion__item">
+            <header class="faq-accordion__header">
+              <h3 class="faq-accordion__title">How do I reset my password?</h3>
+              <img class="faq-accordion__icon" src="./images/icon-arrow-down.svg" alt="arrow down">
+            </header>
+            <div class="faq-accordion__text">Click “Forgot password” from the login page or “Change password” from
+              your profile page.
+              A reset link will be emailed to you.</div>
+          </div>
+          <div class="faq-accordion__item">
+            <header class="faq-accordion__header">
+              <h3 class="faq-accordion__title">Can I cancel my subscription?</h3>
+              <img class="faq-accordion__icon" src="./images/icon-arrow-down.svg" alt="arrow down">
+            </header>
+            <div class="faq-accordion__text">Yes! Send us a message and we’ll process your request no questions asked.
+            </div>
+          </div>
+          <div class="faq-accordion__item">
+            <header class="faq-accordion__header">
+              <h3 class="faq-accordion__title">Do you provide additional support?</h3>
+              <img class="faq-accordion__icon" src="./images/icon-arrow-down.svg" alt="arrow down">
+            </header>
+            <div class="faq-accordion__text">Chat and email support is available 24/7. Phone lines are open during
+              normal business hours.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Mykyta Rakhmanyi</a>.
+    </div>
+  </main>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>

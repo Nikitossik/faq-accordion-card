@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+:root {
+    --clr-primary: hsl(238, 29%, 16%);
+    --clr-secondary: hsl(14, 88%, 65%);
+
+    --clr-accordion-title: hsl(237, 12%, 33%);
+    --clr-accordion-text: hsl(240, 6%, 50%);
+
+    --clr-divider: hsl(240, 5%, 91%);
+
+    --main-gradient: linear-gradient(180deg, hsl(273, 75%, 66%) 0%, hsl(240, 73%, 65%) 100%);
+
+    --transition: 0.3s all ease;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 1rem;
+    line-height: normal;
+}
+
+.wrapper {
+    position: relative;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background: var(--main-gradient);
+    padding: 9.25rem 1.5rem 5.3125rem;
+}
+
+.title {
+    color: var(--clr-primary);
+    font-size: 2rem;
+}
+
+.faq {
+    max-width: 57.5rem;
+    width: 100%;
+    position: relative;
+    padding: 0 1.5rem 3rem;
+    border-radius: 1.4375rem;
+    background: #FFF;
+    box-shadow: 0px 3.125rem 3.125rem -1.25rem rgba(53, 18, 122, 0.50);
+}
+
+.faq-image {
+    position: relative;
+    margin: 0 auto;
+    max-width: 15rem;
+    width: 100%;
+}
+
+.faq-image>* {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+}
+
+.faq-image__woman {
+    transform: translate(-50%, -60%);
+}
+
+.faq-image__pattern {
+    transform: translate(-50%, 0);
+}
+
+.faq-box {
+    position: absolute;
+    display: none;
+}
+
+.faq-body {
+    padding: 8.25rem 0 0 0;
+}
+
+.faq__title {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.faq-accordion {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.19rem;
+}
+
+.faq-accordion__item {
+    display: grid;
+    grid-template-rows: auto 0fr;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--clr-divider);
+    transition: var(--transition);
+}
+
+.faq-accordion__item--active {
+    grid-template-rows: auto 1fr;
+}
+
+.faq-accordion__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    column-gap: 0.5rem;
+    cursor: pointer;
+}
+
+.faq-accordion__title {
+    color: var(--clr-accordion-title);
+    font-size: 0.8125rem;
+    font-weight: 400;
+    transition: var(--transition);
+}
+
+.faq-accordion__item--active .faq-accordion__title {
+    color: var(--clr-primary);
+    font-weight: 700;
+    margin-bottom: 0.63rem;
+}
+
+.faq-accordion__icon {
+    margin-top: 5px;
+    color: var(--clr-secondary);
+    width: 0.5rem;
+    transition: var(--transition);
+}
+
+.faq-accordion__item--active .faq-accordion__icon {
+    transform: rotate(-180deg);
+}
+
+.faq-accordion__text {
+    color: var(--clr-accordion-text);
+    transition: var(--transition);
+    overflow: hidden;
+    font-size: 0.75rem;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 1rem;
+    text-align: center;
+}
+
+.attribution a {
+    color: #fff;
+}
+
+@media (min-width: 57.5em) {
+    .wrapper {
+        padding: 0 1.5rem;
+    }
+
+    .faq {
+        padding: 0 5.94rem 0 0;
+        display: flex;
+    }
+
+    .faq-body {
+        padding: 4.06rem 0 5.19rem 0;
+        flex: 0 0 21.875rem;
+    }
+
+    .faq__title {
+        text-align: left;
+    }
+
+    .faq-image {
+        margin: unset;
+        max-width: unset;
+        flex: 0 1 auto;
+        overflow: hidden;
+    }
+
+    .faq-image>* {
+        min-width: max-content;
+    }
+
+    .faq-image__woman {
+        left: -5.5rem;
+        top: 12%;
+        transform: unset;
+        z-index: 2;
+    }
+
+    .faq-image__pattern {
+        left: unset;
+        top: -71%;
+        right: 5.5rem;
+        transform: unset;
+        z-index: 1;
+    }
+
+    .faq-box {
+        min-width: max-content;
+        display: block;
+        left: 0;
+        top: 41%;
+        transform: translateX(-50%);
+        z-index: 3;
+    }
+}
